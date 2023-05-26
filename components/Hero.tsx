@@ -2,7 +2,7 @@ import { FaStar } from 'react-icons/fa'
 
 const Hero: React.FC = () => {
   return (
-    <section className='w-[95%] pl-16 max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.5fr] items-center gap-16 mt-20'>
+    <section className='w-[95%] pl-20 max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.5fr] items-center gap-16 mt-20'>
       <article className='flex flex-col gap-4'>
         <h2 className='font-bold font-raleway text-[64px]'>
           Revolutionizing Everyday Work

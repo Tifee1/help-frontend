@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Footer: React.FC = () => {
   return (
-    <footer className='w-[90%] max-w-7xl mx-auto font-montserrat'>
+    <footer className='w-[90%] max-w-5xl mx-auto font-montserrat'>
       <section className='grid grid-cols-2 sm:grid-cols-4 gap-4 '>
         {/* Logo */}
         <article className='text-[rgba(0,_0,_0,_0.5)] text-lg'>
