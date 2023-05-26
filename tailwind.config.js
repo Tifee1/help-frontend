@@ -13,6 +13,13 @@ module.exports = {
       xs: '475px',
       ...defaultTheme.screens,
     },
+    extend: {
+      fontFamily: {
+        raleway: ['Raleway'],
+        lato: ['Lato'],
+        garamond: ['Garamond'],
+      },
+    },
   },
 
   plugins: [],

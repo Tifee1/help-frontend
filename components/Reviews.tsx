@@ -10,8 +10,8 @@ const Reviews: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto my-16'>
       <div className='text-center relative mb-8'>
-        <h3 className='text-[#2B4E8C]'>reviews</h3>
-        <h2 className='font-bold'>feedback from you</h2>
+        <h3 className='text-[#2B4E8C]'>Reviews</h3>
+        <h2 className='font-bold font-raleway'>Feedback from you</h2>
       </div>
 
       <Swiper
@@ -24,18 +24,16 @@ const Reviews: React.FC = () => {
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
         }}
-        // 1280: { slidesPerView: 5 },
         className='swiper-container'
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
             <article className='rounded-[20px] shadow-2xl flex flex-col items-center justify-center px-6 h-[485px] mb-12 relative'>
               <div className='flex items-center justify-center mb-4'>
-                <Image
+                <img
                   src={review.image}
                   alt={review.name}
-                  width={68}
-                  height={68}
+                  className='w-[68] h-[68]'
                 />
               </div>
               <h3 className='font-bold text-center mb-2'>{review.name}</h3>

@@ -1,59 +1,51 @@
-import Image from 'next/image'
-
 const Download: React.FC = () => {
   return (
     <section className='w-[95%] max-w-6xl mx-auto mt-24'>
       <div className='text-center relative'>
         <h3 className='text-[#2B4E8C]'>join us</h3>
-        <h2 className='font-bold'>our app</h2>
+        <h2 className='font-bold font-raleway'>our app</h2>
       </div>
       <div className='grid lg:grid-cols-[2fr_1fr] gap-8 items-center justify-center mt-12'>
         <div className='relative flex justify-center items-center'>
-          <Image
+          <img
             src='/images/iPhone-13.png'
             alt='iphone'
-            width={354}
-            height={645}
-            className='z-10'
+            className='w-[354px] h-[645px] z-10'
           />
           <div className='absolute h-[370px] w-[370px] rounded-full border border-gray-300'></div>
           <div className='absolute h-[500px] w-[500px] rounded-full border border-gray-300'></div>
           <div className='absolute h-[600px] w-[600px] rounded-full border border-gray-300'></div>
           <div className='absolute top-[15%] left-[15%]'>
-            <Image
+            <img
               src='/images/small1.png'
               alt='small1'
-              width={55}
-              height={55}
+              className='w-[55px] h-[55px]'
             />
           </div>
           <div className='absolute top-[30%] right-[15%]'>
-            <Image
+            <img
               src='/images/small2.png'
-              alt='small1'
-              width={55}
-              height={55}
+              alt='small2'
+              className='w-[55px] h-[55px]'
             />
           </div>
           <div className='absolute top-[50%] left-[20%]'>
-            <Image
+            <img
               src='/images/small3.png'
-              alt='small1'
-              width={55}
-              height={55}
+              alt='small3'
+              className='w-[55px] h-[55px]'
             />
           </div>
           <div className='absolute top-[70%] right-[20%]'>
-            <Image
+            <img
               src='/images/small4.png'
-              alt='small1'
-              width={55}
-              height={55}
+              alt='small4'
+              className='w-[55px] h-[55px]'
             />
           </div>
         </div>
         <div className='grid gap-4'>
-          <h2 className='font-bold'>Download our app now</h2>
+          <h2 className='font-bold font-raleway'>Download our app now</h2>
           <p className='text-lg text-[rgba(0,_0,_0,_0.5)]'>
             Make your to-do list wherever you are with our mobile app.
           </p>
@@ -63,17 +55,15 @@ const Download: React.FC = () => {
             and installing furniture to moving and cleaning
           </p>
           <div className='flex gap-5 items-center'>
-            <Image
+            <img
               src='/images/i-store.png'
               alt='i-store'
-              width={186}
-              height={58}
+              className='w-[186px] h-[58px]'
             />
-            <Image
+            <img
               src='/images/playstore.png'
               alt='i-store'
-              width={186}
-              height={58}
+              className='w-[186px] h-[58px]'
             />
           </div>
         </div>
