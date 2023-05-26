@@ -18,6 +18,13 @@ const Reviews: React.FC = () => {
         spaceBetween={30}
         slidesPerView={4}
         pagination={{ clickable: true }}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          475: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        }}
+        // 1280: { slidesPerView: 5 },
         className='swiper-container'
       >
         {reviews.map((review, index) => (
