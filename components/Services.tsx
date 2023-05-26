@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 const Services: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-16'>
-      <div className='text-center relative'>
+      <div className='text-center relative mb-20'>
         <h3 className='text-[#2B4E8C] text-lg'>popular</h3>
         <h2 className='font-bold font-raleway text-[32px]'>popular services</h2>
         <h3 className='text-[#2B4E8C]/70 font-bold font-raleway text-[32px] relative sm:absolute right-0 top-[50%] lowercase'>
