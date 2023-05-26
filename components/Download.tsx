@@ -7,7 +7,7 @@ const Download: React.FC = () => {
         <h3 className='text-[#2B4E8C]'>join us</h3>
         <h2 className='font-bold'>our app</h2>
       </div>
-      <div className='grid grid-cols-[2fr_1fr] gap-8 items-center justify-center mt-12'>
+      <div className='grid lg:grid-cols-[2fr_1fr] gap-8 items-center justify-center mt-12'>
         <div className='relative flex justify-center items-center'>
           <Image
             src='/images/iPhone-13.png'

@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
         <h3 className='text-[#2B4E8C]'>contacts</h3>
         <h2 className='font-bold'>contact us</h2>
       </div>
-      <article className='grid grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-3xl mx-auto rounded-[20px] shadow-2xl p-8'>
+      <article className='grid sm:grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-3xl mx-auto rounded-[20px] shadow-2xl p-8'>
         <div className='grid gap-4'>
           <Image
             src='/images/contact.png'

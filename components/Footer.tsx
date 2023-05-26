@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Footer: React.FC = () => {
   return (
     <footer className='w-[90%] max-w-7xl mx-auto'>
-      <section className='grid grid-cols-4 gap-4 '>
+      <section className='grid grid-cols-2 sm:grid-cols-4 gap-4 '>
         {/* Logo */}
         <article className='text-[rgba(0,_0,_0,_0.5)]'>
           <Image src='/images/logo.png' alt='logo' width={121} height={49} />
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           <p className='mb-4 font-semibold'>
             Tackle your to-do list wherever you are with our mobile app.
           </p>
-          <div className='flex gap-4 items-center'>
+          <div className='flex flex-col xl:flex-row gap-4 justify-center items-center'>
             <Image
               src='/images/i-store.png'
               alt='i-store'
