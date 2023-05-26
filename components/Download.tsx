@@ -1,6 +1,6 @@
 const Download: React.FC = () => {
   return (
-    <section className='w-[95%] max-w-6xl mx-auto mt-24'>
+    <section className='w-[95%] max-w-7xl mx-auto mt-24 pl-16'>
       <div className='text-center relative'>
         <h3 className='text-[#2B4E8C]'>join us</h3>
         <h2 className='font-bold font-raleway'>our app</h2>

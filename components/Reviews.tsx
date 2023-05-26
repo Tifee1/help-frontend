@@ -55,6 +55,10 @@ const Reviews: React.FC = () => {
             </article>
           </SwiperSlide>
         ))}
+        <div
+          className='swiper-pagination bg-white'
+          slot='container-start'
+        ></div>
       </Swiper>
     </section>
   )

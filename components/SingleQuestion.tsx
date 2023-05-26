@@ -17,7 +17,7 @@ const SingleQuestion = ({ question, answer }: Props) => {
         }
         onClick={() => setShow(!show)}
       >
-        <h3>{question}</h3>
+        <h3 className='text-center'>{question}</h3>
         <div>
           <span className='ml-4 text-2xl'>
             {show ? (

@@ -1,30 +1,33 @@
-import { useState, useRef } from 'react'
+import { useRef } from 'react'
+import { z } from 'zod'
 
 import { toast } from 'react-toastify'
 import emailjs from '@emailjs/browser'
-import { BiUser, BiEnvelope } from 'react-icons/bi'
-import { BsChat } from 'react-icons/bs'
+import { BiUser } from 'react-icons/bi'
+import { useForm, SubmitHandler } from 'react-hook-form'
 
 const Contact: React.FC = () => {
+  type FormData = {
+    msg: string
+    name: string
+    subject: string
+  }
+
   const formRef = useRef<HTMLFormElement>(null)
-  const [subjectEntered, setEnteredSubject] = useState<string>('')
-  const [nameEntered, setEnteredName] = useState<string>('')
-  const [messageEntered, setEnteredMessage] = useState<string>('')
 
-  const handleSubmit = async (e: React.MouseEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const { register, handleSubmit } = useForm()
+
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
+    const schema = z.coerce.string()
     if (!formRef.current) return
-    if (!subjectEntered || !nameEntered || !messageEntered) {
-      toast.error('Please fill all input values')
-      return
+    if (
+      !schema.parse(data.msg) ||
+      !schema.parse(data.subject) ||
+      !schema.parse(data.subject)
+    ) {
+      toast.error('Please provide all values')
     }
-
-    if (messageEntered.length > 400) {
-      toast.error('Message too long')
-      return
-    }
-
-    let data
+    let datas
     if (
       !process.env.NEXT_PUBLIC_PRIVATE_KEY ||
       !process.env.NEXT_PUBLIC_TEMPLATE_KEY ||
@@ -39,16 +42,13 @@ const Contact: React.FC = () => {
         formRef.current,
         process.env.NEXT_PUBLIC_PRIVATE_KEY
       )
-      data = resp.text
+      datas = resp.text
     } catch (error) {
-      toast.error(data)
+      toast.error(datas)
       return
     }
 
     toast.success('Email Sent Successfully')
-    setEnteredSubject('')
-    setEnteredName('')
-    setEnteredMessage('')
   }
 
   return (
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
         <h3 className='text-[#2B4E8C]'>contacts</h3>
         <h2 className='font-bold font-raleway'>contact us</h2>
       </div>
-      <article className='grid sm:grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-3xl mx-auto rounded-[20px] shadow-2xl p-8'>
+      <article className='grid sm:grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-4xl mx-auto rounded-[20px] shadow-2xl p-8'>
         <div className='grid gap-4'>
           <img
             src='/images/contact.png'
@@ -82,21 +82,19 @@ const Contact: React.FC = () => {
           </div>
         </div>
         <form
+          onSubmit={handleSubmit(onSubmit)}
           className='flex flex-col items-start justify-evenly w-full'
           ref={formRef}
-          onSubmit={handleSubmit}
         >
-          {/* Name */}
           <div className='w-full'>
             <div className='relative mb-6'>
               <BiUser className='pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3 text-[rgba(0,_0,_0,_0.5)]' />
               <input
+                {...register('name', { required: true })}
                 type='text'
                 id='name'
                 className='h-[50px] box-border outline-none mb-8 p-[0.7rem] rounded-[20px] w-full resize-none shadow-lg bg-pry text-black font-medium pl-12 text-sm focus:ring-blue-500 focus:border-blue-500 block '
                 placeholder='Your Name'
-                value={nameEntered}
-                onChange={(e) => setEnteredName(e.target.value)}
               />
             </div>
           </div>
@@ -108,12 +106,11 @@ const Contact: React.FC = () => {
                 className='pointer-events-none w-6 h-5 absolute top-1/2 transform -translate-y-1/2 left-3 text-[rgba(0,_0,_0,_0.5)]'
               />
               <input
+                {...register('subject', { required: true })}
                 type='text'
                 id='subject'
                 className='h-[50px] box-border outline-none mb-8 p-[0.7rem] rounded-[20px] w-full resize-none shadow-lg bg-pry text-black font-medium pl-12 text-sm focus:ring-blue-500 focus:border-blue-500 block '
                 placeholder='Your Subject'
-                value={subjectEntered}
-                onChange={(e) => setEnteredSubject(e.target.value)}
               />
             </div>
           </div>
@@ -125,15 +122,13 @@ const Contact: React.FC = () => {
                 className='pointer-events-none w-6 h-5 absolute top-6 transform -translate-y-1/2 left-3 text-[rgba(0,_0,_0,_0.5)]'
               />
               <textarea
+                {...register('msg', { required: true })}
                 id='message'
                 className='h-[150px] box-border outline-none mb-8 p-[0.7rem] rounded-[20px] w-full resize-none shadow-lg bg-pry text-black font-medium pl-12 text-sm focus:ring-blue-500 focus:border-blue-500 block '
                 placeholder='Your Message'
-                value={messageEntered}
-                onChange={(e) => setEnteredMessage(e.target.value)}
               />
             </div>
           </div>
-
           <button
             type='submit'
             className='trans bg-[#2B4E8C] text-white rounded-[50px] font-medium w-full hover:bg-[#2B4E8C]/70 text-lg px-4 py-1'

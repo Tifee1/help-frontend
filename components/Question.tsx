@@ -8,7 +8,7 @@ const Question: React.FC = () => {
         <h3 className='text-[#2B4E8C]'>questions</h3>
         <h2 className='font-bold font-raleway'>Frequently asked questions</h2>
       </div>
-      <article className='mt-20 grid sm:grid-cols-2 gap-2 sm:gap-6 items-center justify-center w-[90%] max-w-3xl mx-auto'>
+      <article className='mt-20 grid sm:grid-cols-2 gap-2 sm:gap-6 items-center justify-center w-[90%] max-w-4xl mx-auto'>
         {faqs.map((faq, index) => {
           return <SingleQuestion key={index} {...faq} />
         })}
