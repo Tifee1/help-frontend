@@ -17,7 +17,7 @@ const SingleQuestion = ({ question, answer }: Props) => {
         }
         onClick={() => setShow(!show)}
       >
-        <h3 className='text-center'>{question}</h3>
+        <h3 className='text-center text-lg'>{question}</h3>
         <div>
           <span className='ml-4 text-2xl'>
             {show ? (
@@ -37,7 +37,7 @@ const SingleQuestion = ({ question, answer }: Props) => {
         </div>
       </div>
       {show && (
-        <p className='pt-4 text-base  text-center tracking-wide text-black/50'>
+        <p className='pt-4 text-[14px] text-center tracking-wide text-black/50'>
           {answer}
         </p>
       )}

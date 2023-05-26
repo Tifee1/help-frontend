@@ -10,14 +10,18 @@ const Reviews: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto my-16'>
       <div className='text-center relative mb-8'>
-        <h3 className='text-[#2B4E8C]'>Reviews</h3>
-        <h2 className='font-bold font-raleway'>Feedback from you</h2>
+        <h3 className='text-[#2B4E8C] text-lg'>Reviews</h3>
+        <h2 className='font-bold font-raleway text-[32px]'>
+          Feedback from you
+        </h2>
       </div>
 
       <Swiper
         spaceBetween={30}
         slidesPerView={4}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+        }}
         breakpoints={{
           320: { slidesPerView: 1 },
           475: { slidesPerView: 2 },
@@ -36,7 +40,9 @@ const Reviews: React.FC = () => {
                   className='w-[68] h-[68]'
                 />
               </div>
-              <h3 className='font-bold text-center mb-2'>{review.name}</h3>
+              <h3 className='font-bold text-center mb-2 text-lg'>
+                {review.name}
+              </h3>
 
               <div className='flex items-center justify-center mb-10'>
                 <StarRatings
@@ -46,19 +52,15 @@ const Reviews: React.FC = () => {
                   starRatedColor='#FFE500'
                 />
               </div>
-              <p className='text-[rgba(0,_0,_0,_0.7)] mb-20'>
+              <p className='text-[rgba(0,_0,_0,_0.7)] text-lg mb-20'>
                 {review.message}
               </p>
-              <p className='font-semibold absolute bottom-2 right-5'>
+              <p className='font-semibold absolute bottom-2 right-5 text-lg'>
                 {review.date}
               </p>
             </article>
           </SwiperSlide>
         ))}
-        <div
-          className='swiper-pagination bg-white'
-          slot='container-start'
-        ></div>
       </Swiper>
     </section>
   )

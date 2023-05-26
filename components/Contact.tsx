@@ -4,10 +4,10 @@ import { z } from 'zod'
 import { toast } from 'react-toastify'
 import emailjs from '@emailjs/browser'
 import { BiUser } from 'react-icons/bi'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 
 const Contact: React.FC = () => {
-  type FormData = {
+  type FormData = FieldValues & {
     msg: string
     name: string
     subject: string
@@ -54,8 +54,8 @@ const Contact: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-16'>
       <div className='text-center relative mb-8'>
-        <h3 className='text-[#2B4E8C]'>contacts</h3>
-        <h2 className='font-bold font-raleway'>contact us</h2>
+        <h3 className='text-[#2B4E8C] text-lg'>contacts</h3>
+        <h2 className='font-bold font-raleway text-[32px]'>contact us</h2>
       </div>
       <article className='grid sm:grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-4xl mx-auto rounded-[20px] shadow-2xl p-8'>
         <div className='grid gap-4'>
@@ -68,21 +68,25 @@ const Contact: React.FC = () => {
             <div className='flex gap-1 items-center font-semibold'>
               <img src='./images/call.png' alt='call' className='w-5 h-5' />
               <div>
-                <p>Call Us</p>
-                <p className='text-[rgba(0,_0,_0,_0.5)]'>+351-965-990-000</p>
+                <p className='text-lg'>Call Us</p>
+                <p className='text-[rgba(0,_0,_0,_0.5)] text-[15px]'>
+                  +351-965-990-000
+                </p>
               </div>
             </div>
             <div className='flex gap-1 items-center font-semibold'>
               <img src='./images/at.png' alt='at' className='w-5 h-5' />
               <div>
-                <p>Our Email</p>
-                <p className='text-[rgba(0,_0,_0,_0.5)]'>@helpyou@gmail.com</p>
+                <p className='text-lg'>Our Email</p>
+                <p className='text-[rgba(0,_0,_0,_0.5)] text-[15px]'>
+                  @helpyou@gmail.com
+                </p>
               </div>
             </div>
           </div>
         </div>
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          onSubmit={handleSubmit(() => onSubmit)}
           className='flex flex-col items-start justify-evenly w-full'
           ref={formRef}
         >

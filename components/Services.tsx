@@ -5,9 +5,9 @@ const Services: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-16'>
       <div className='text-center relative'>
-        <h3 className='text-[#2B4E8C]'>popular</h3>
-        <h2 className='font-bold font-raleway'>popular services</h2>
-        <h3 className='text-[#2B4E8C]/70 font-bold font-raleway relative sm:absolute right-0 top-[50%] lowercase'>
+        <h3 className='text-[#2B4E8C] text-lg'>popular</h3>
+        <h2 className='font-bold font-raleway text-[32px]'>popular services</h2>
+        <h3 className='text-[#2B4E8C]/70 font-bold font-raleway text-[32px] relative sm:absolute right-0 top-[50%] lowercase'>
           10 options
         </h3>
       </div>
@@ -34,7 +34,7 @@ const Services: React.FC = () => {
                   alt={item.text}
                   className='w-[240px] h-[255px]'
                 />
-                <div className='text-center mt-2'>
+                <div className='text-center mt-2 text-[14px]'>
                   <p className='capitalize mb-2'>{item.text}</p>
                   <p className='font-semibold'>+ {item.requests} requests</p>
                 </div>

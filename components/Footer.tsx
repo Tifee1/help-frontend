@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className='w-[90%] max-w-7xl mx-auto font-montserrat'>
       <section className='grid grid-cols-2 sm:grid-cols-4 gap-4 '>
         {/* Logo */}
-        <article className='text-[rgba(0,_0,_0,_0.5)]'>
+        <article className='text-[rgba(0,_0,_0,_0.5)] text-lg'>
           <img
             src='/images/logo.png'
             alt='logo'
@@ -17,8 +17,8 @@ const Footer: React.FC = () => {
           <p>©2023. All rights reserved.</p>
         </article>
         {/* About Us */}
-        <article className='text-[rgba(0,_0,_0,_0.5)] grid gap-2 '>
-          <h3 className='text-[#2B4E8C] mb-2 font-bold'>About us</h3>
+        <article className='text-[rgba(0,_0,_0,_0.5)] grid gap-2 text-lg '>
+          <h3 className='text-[#2B4E8C] mb-2 font-bold text-lg'>About us</h3>
           <Link href='#faq' className='font-semibold'>
             Frequently asked questions
           </Link>
@@ -33,14 +33,16 @@ const Footer: React.FC = () => {
           </Link>
         </article>
         {/* Contact */}
-        <article className='text-[rgba(0,_0,_0,_0.5)]'>
-          <h3 className='text-[#2B4E8C] mb-4 font-bold'>Contacts</h3>
+        <article className='text-[rgba(0,_0,_0,_0.5)] text-lg'>
+          <h3 className='text-[#2B4E8C] mb-4 font-bold text-lg'>Contacts</h3>
           <p className='mb-2 font-semibold'>+351-965-990-000</p>
           <p className='font-semibold'>@helpyou@gmail.com</p>
         </article>
         {/* App */}
-        <article className='text-[rgba(0,_0,_0,_0.5)]'>
-          <h3 className='text-[#2B4E8C] mb-4 font-bold'>Download Our App</h3>
+        <article className='text-[rgba(0,_0,_0,_0.5)] text-lg'>
+          <h3 className='text-[#2B4E8C] mb-4 font-bold text-lg'>
+            Download Our App
+          </h3>
           <p className='mb-4 font-semibold'>
             Tackle your to-do list wherever you are with our mobile app.
           </p>
@@ -58,7 +60,7 @@ const Footer: React.FC = () => {
           </div>
         </article>
       </section>
-      <h4 className='text-[rgba(14,_14,_14,_0.5)] font-semibold text-center mt-8 mb-16'>
+      <h4 className='text-[rgba(14,_14,_14,_0.5)] font-semibold text-center mt-8 mb-16 text-[15px]'>
         By using this website, you understand the information being presented is
         provided for informational purposes only
       </h4>
