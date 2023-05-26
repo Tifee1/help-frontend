@@ -1,5 +1,9 @@
 import { useState, useRef } from 'react'
 import Image from 'next/image'
+
+import { toast } from 'react-toastify'
+import emailjs from '@emailjs/browser'
+
 import { FaPhoneAlt } from 'react-icons/fa'
 import { BiUser, BiEnvelope } from 'react-icons/bi'
 import { BsChat } from 'react-icons/bs'
@@ -9,6 +13,46 @@ const Contact: React.FC = () => {
   const [subjectEntered, setEnteredSubject] = useState<string>('')
   const [nameEntered, setEnteredName] = useState<string>('')
   const [messageEntered, setEnteredMessage] = useState<string>('')
+
+  const handleSubmit = async (e: React.MouseEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!formRef.current) return
+    if (!subjectEntered || !nameEntered || !messageEntered) {
+      toast.error('Please fill all input values')
+      return
+    }
+
+    if (messageEntered.length > 400) {
+      toast.error('Message too long')
+      return
+    }
+
+    let data
+    if (
+      !process.env.NEXT_PUBLIC_PRIVATE_KEY ||
+      !process.env.NEXT_PUBLIC_TEMPLATE_KEY ||
+      !process.env.NEXT_PUBLIC_SERVICE_KEY
+    ) {
+      throw new Error('No env keys provided')
+    }
+    try {
+      const resp = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_KEY,
+        process.env.NEXT_PUBLIC_TEMPLATE_KEY,
+        formRef.current,
+        process.env.NEXT_PUBLIC_PRIVATE_KEY
+      )
+      data = resp.text
+    } catch (error) {
+      toast.error(data)
+      return
+    }
+
+    toast.success('Email Sent Successfully')
+    setEnteredSubject('')
+    setEnteredName('')
+    setEnteredMessage('')
+  }
 
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-16'>
@@ -44,7 +88,7 @@ const Contact: React.FC = () => {
         <form
           className='flex flex-col items-start justify-evenly w-full'
           ref={formRef}
-          // onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
         >
           {/* Name */}
           <div className='w-full'>
