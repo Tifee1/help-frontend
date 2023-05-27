@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
         >
           <div className='w-full'>
             <div className='relative mb-6'>
-              <BiUser className='pointer-events-none w-6 h-5 absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]' />
+              <BiUser className='pointer-events-none w-6 h-[27px] absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]' />
               <input
                 {...register('name', { required: true })}
                 type='text'
