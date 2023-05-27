@@ -16,7 +16,7 @@ const Reviews: React.FC = () => {
         </h2>
       </div>
 
-      <section className='w-full ml-[70px] mb-16'>
+      <section className='w-full mb-16 overflow-hidden'>
         <Swiper
           spaceBetween={24}
           slidesPerView={4}
@@ -29,7 +29,7 @@ const Reviews: React.FC = () => {
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
           }}
-          className='swiper-container'
+          className='swiper-container pl-[70px] py-4'
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>

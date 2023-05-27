@@ -11,7 +11,7 @@ const Services: React.FC = () => {
           10 options
         </h3>
       </div>
-      <section className='w-full ml-[70px] mt-16'>
+      <section className='ml-[70px] mt-16 overflow-hidden'>
         <Swiper
           spaceBetween={15}
           slidesPerView={5}
@@ -23,7 +23,7 @@ const Services: React.FC = () => {
           }}
           loop={true}
           direction='horizontal'
-          className='swiper-container'
+          className='swiper-container w-full'
         >
           <div>
             {services.map((item, id) => (

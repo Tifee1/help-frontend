@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
               <img
                 src='./images/msg.svg'
                 alt='msg'
-                className='pointer-events-none w-6 h-5 absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]'
+                className='pointer-events-none w-6 h-[18px] absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]'
               />
               <input
                 {...register('subject', { required: true })}
@@ -134,7 +134,7 @@ const Contact: React.FC = () => {
               <img
                 src='./images/chat.svg'
                 alt='chat'
-                className='pointer-events-none w-6 h-5 absolute top-9 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]'
+                className='pointer-events-none w-6 h-[22px] absolute top-9 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]'
               />
               <textarea
                 {...register('msg', { required: true })}
