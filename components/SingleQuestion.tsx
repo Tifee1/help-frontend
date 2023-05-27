@@ -10,7 +10,7 @@ const SingleQuestion = ({ question, answer }: Props) => {
   const [show, setShow] = useState<boolean>(false)
 
   return (
-    <div className='mb-12 trans shadow-lg rounded-[20px] p-6'>
+    <div className='mb-12 trans shadow-[0px_1px_12px_rgba(0,_0,_0,_0.22)] rounded-[20px] p-6'>
       <div
         className={
           'trans grid grid-cols-[1fr_30px] items-start gap-4 p-4 cursor-pointer'
