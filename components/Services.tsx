@@ -4,14 +4,14 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 const Services: React.FC = () => {
   return (
     <>
-      <div className='w-[95%] max-w-7xl mx-auto text-center relative mb-[50px] mt-16'>
+      <div className='w-[95%] max-w-7xl mx-auto text-center relative mt-16'>
         <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>Popular</h3>
         <h2 className='font-bold font-raleway text-[32px]'>Popular services</h2>
         <h3 className='text-[rgba(43,_78,_140,_0.5)] font-bold font-raleway text-[32px] relative sm:absolute right-0 top-[50%] lowercase'>
           10 options
         </h3>
       </div>
-      <section className='mt-16 overflow-hidden'>
+      <section className='overflow-hidden'>
         <Swiper
           spaceBetween={15}
           slidesPerView={5}

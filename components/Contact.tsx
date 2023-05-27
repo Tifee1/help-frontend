@@ -3,7 +3,6 @@ import { z } from 'zod'
 
 import { toast } from 'react-toastify'
 import emailjs from '@emailjs/browser'
-import { BiUser } from 'react-icons/bi'
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 
 const Contact: React.FC = () => {
@@ -63,9 +62,9 @@ const Contact: React.FC = () => {
             <img
               src='/images/contact.png'
               alt='contact'
-              className='w-[400px] h-[345px] relative z-10'
+              className='w-[400px] h-[345px] object-contain relative z-10'
             />
-            <div className='bg-[#2B4E8C] w-[284px] h-[284px] absolute rounded-full bottom-0 left-[15%]'></div>
+            <div className='bg-[#2B4E8C] w-[284px] h-[284px] absolute rounded-full bottom-0 left-[10%]'></div>
           </div>
           <div className='grid grid-cols-2 gap-7 mt-[30px]'>
             <div className='flex gap-2.5 font-semibold'>
@@ -103,7 +102,11 @@ const Contact: React.FC = () => {
         >
           <div className='w-full'>
             <div className='relative mb-6'>
-              <BiUser className='pointer-events-none w-6 h-[27px] absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]' />
+              <img
+                src='./images/profile.svg'
+                alt='msg'
+                className='pointer-events-none w-6 h-[27px] absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]'
+              />
               <input
                 {...register('name', { required: true })}
                 type='text'

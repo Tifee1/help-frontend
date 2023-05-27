@@ -3,13 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import StarRatings from 'react-star-ratings'
 
 import { reviews } from '@/utils/constant'
-import Image from 'next/image'
 
 const Reviews: React.FC = () => {
   SwiperCore.use([Pagination])
   return (
     <>
-      <div className='w-[95%] max-w-7xl  mt-16 mx-auto text-center relative mb-8'>
+      <div className='w-[95%] max-w-7xl  mt-16 mx-auto text-center relative'>
         <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>Reviews</h3>
         <h2 className='font-bold font-raleway text-[32px]'>
           Feedback from you
