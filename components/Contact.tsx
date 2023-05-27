@@ -54,19 +54,26 @@ const Contact: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-16'>
       <div className='text-center relative mb-8'>
-        <h3 className='text-[#2B4E8C] text-lg'>contacts</h3>
+        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>contacts</h3>
         <h2 className='font-bold font-raleway text-[32px]'>contact us</h2>
       </div>
-      <article className='grid sm:grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-4xl mx-auto rounded-[20px] shadow-2xl p-8'>
+      <article className='grid md:grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-4xl mx-auto rounded-[20px] shadow-2xl p-[50px]'>
         <div className='grid gap-4'>
-          <img
-            src='/images/contact.png'
-            alt='contact'
-            className='w-[400px] h-[345px]'
-          />
-          <div className='grid grid-cols-2 gap-1'>
-            <div className='flex gap-1 items-center font-semibold'>
-              <img src='./images/call.png' alt='call' className='w-5 h-5' />
+          <div className='relative'>
+            <img
+              src='/images/contact.png'
+              alt='contact'
+              className='w-[400px] h-[345px] relative z-10'
+            />
+            <div className='bg-[#2B4E8C] w-[284px] h-[284px] absolute rounded-full bottom-0 left-[15%]'></div>
+          </div>
+          <div className='grid grid-cols-2 gap-7 mt-[30px]'>
+            <div className='flex gap-2.5 font-semibold'>
+              <img
+                src='./images/call.svg'
+                alt='call'
+                className='w-[23px] h-[23px]'
+              />
               <div>
                 <p className='text-lg'>Call Us</p>
                 <p className='text-[rgba(0,_0,_0,_0.5)] text-[15px]'>
@@ -74,8 +81,12 @@ const Contact: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className='flex gap-1 items-center font-semibold'>
-              <img src='./images/at.png' alt='at' className='w-5 h-5' />
+            <div className='flex gap-2.5 font-semibold'>
+              <img
+                src='./images/at.svg'
+                alt='at'
+                className='w-[23px] h-[23px]'
+              />
               <div>
                 <p className='text-lg'>Our Email</p>
                 <p className='text-[rgba(0,_0,_0,_0.5)] text-[15px]'>
@@ -92,12 +103,12 @@ const Contact: React.FC = () => {
         >
           <div className='w-full'>
             <div className='relative mb-6'>
-              <BiUser className='pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3 text-[rgba(0,_0,_0,_0.5)]' />
+              <BiUser className='pointer-events-none w-6 h-5 absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]' />
               <input
                 {...register('name', { required: true })}
                 type='text'
                 id='name'
-                className='h-[50px] box-border outline-none mb-8 p-[0.7rem] rounded-[20px] w-full resize-none shadow-lg bg-pry text-black font-medium pl-12 text-sm focus:ring-blue-500 focus:border-blue-500 block '
+                className='h-[70px] box-border outline-none mb-5 py-6 rounded-[20px] w-full resize-none shadow-[0px_1px_12px_rgba(0,_0,_0,_0.22)] bg-pry text-black font-medium pl-[74px] text-sm focus:ring-blue-500 focus:border-blue-500 block placeholder:text-lg placeholder:font-medium'
                 placeholder='Your Name'
               />
             </div>
@@ -105,15 +116,15 @@ const Contact: React.FC = () => {
           <div className='w-full'>
             <div className='relative mb-6'>
               <img
-                src='./images/msg.png'
+                src='./images/msg.svg'
                 alt='msg'
-                className='pointer-events-none w-6 h-5 absolute top-1/2 transform -translate-y-1/2 left-3 text-[rgba(0,_0,_0,_0.5)]'
+                className='pointer-events-none w-6 h-5 absolute top-1/2 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]'
               />
               <input
                 {...register('subject', { required: true })}
                 type='text'
                 id='subject'
-                className='h-[50px] box-border outline-none mb-8 p-[0.7rem] rounded-[20px] w-full resize-none shadow-lg bg-pry text-black font-medium pl-12 text-sm focus:ring-blue-500 focus:border-blue-500 block '
+                className='h-[70px] box-border outline-none mb-5 py-6 rounded-[20px] w-full resize-none shadow-[0px_1px_12px_rgba(0,_0,_0,_0.22)] bg-pry text-black font-medium pl-[74px] text-sm focus:ring-blue-500 focus:border-blue-500 block placeholder:text-lg placeholder:font-medium'
                 placeholder='Your Subject'
               />
             </div>
@@ -121,21 +132,21 @@ const Contact: React.FC = () => {
           <div className='w-full'>
             <div className='relative mb-6'>
               <img
-                src='./images/chat.png'
+                src='./images/chat.svg'
                 alt='chat'
-                className='pointer-events-none w-6 h-5 absolute top-6 transform -translate-y-1/2 left-3 text-[rgba(0,_0,_0,_0.5)]'
+                className='pointer-events-none w-6 h-5 absolute top-9 transform -translate-y-1/2 left-[35px] text-[rgba(0,_0,_0,_0.5)]'
               />
               <textarea
                 {...register('msg', { required: true })}
                 id='message'
-                className='h-[150px] box-border outline-none mb-8 p-[0.7rem] rounded-[20px] w-full resize-none shadow-lg bg-pry text-black font-medium pl-12 text-sm focus:ring-blue-500 focus:border-blue-500 block '
+                className='h-[190px] box-border outline-none mb-5 py-6 rounded-[20px] w-full resize-none shadow-[0px_1px_12px_rgba(0,_0,_0,_0.22)] bg-pry text-black font-medium pl-[74px] text-sm focus:ring-blue-500 focus:border-blue-500 block placeholder:text-lg placeholder:font-medium'
                 placeholder='Your Message'
               />
             </div>
           </div>
           <button
             type='submit'
-            className='trans bg-[#2B4E8C] text-white rounded-[50px] font-medium w-full hover:bg-[#2B4E8C]/70 text-lg px-4 py-1'
+            className='trans bg-[#2B4E8C] text-white rounded-[20px] font-medium w-full hover:bg-[#2B4E8C]/70 text-lg px-4 py-4'
           >
             Send
           </button>

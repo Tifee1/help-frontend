@@ -99,15 +99,19 @@ h4 {
   transition: all 0.3s linear;
 }
 
-.swiper-pagination-clickable
-  .swiper-pagination-bullet
-  .swiper-pagination-bullet-active {
-  background: #03c3de;
-}
-.swiper-pagination-clickable .swiper-pagination-bullet {
-  cursor: pointer;
-  background: white;
-  border: 1px solid #03c3de;
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #03c3de;
+  width: 14.46px;
+  height: 14.46px;
+  opacity: 1;
 }
 
+/* target all bullets */
+.swiper-pagination-bullet {
+  border: 0.578378px solid #2b4e8c;
+  background: white;
+  width: 14.46px;
+  height: 14.46px;
+  opacity: 1;
+}
 @tailwind utilities;

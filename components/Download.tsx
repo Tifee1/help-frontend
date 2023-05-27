@@ -2,7 +2,7 @@ const Download: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-24 pl-16'>
       <div className='text-center relative'>
-        <h3 className='text-[#2B4E8C] text-lg'>join us</h3>
+        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>join us</h3>
         <h2 className='font-bold font-raleway text-[32px]'>our app</h2>
       </div>
       <div className='grid lg:grid-cols-[2fr_1fr] gap-8 items-center justify-center mt-12'>
@@ -48,10 +48,10 @@ const Download: React.FC = () => {
           <h2 className='font-bold font-raleway text-[64px]'>
             Download our app now
           </h2>
-          <p className='text-lg text-[rgba(0,_0,_0,_0.5)]'>
+          <p className='text-lg text-[rgba(0,_0,_0,_0.5)] font-medium'>
             Make your to-do list wherever you are with our mobile app.
           </p>
-          <p className='text-lg text-[rgba(0,_0,_0,_0.5)]'>
+          <p className='text-lg text-[rgba(0,_0,_0,_0.5)] font-medium'>
             <span className='font-semibold'>Help</span> is an easy way to find
             qualified and reliable local Helpers for everything from assembling
             and installing furniture to moving and cleaning

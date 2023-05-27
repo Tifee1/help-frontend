@@ -6,7 +6,7 @@ const Header: React.FC = () => {
 
   return (
     <header className='w-[95%] pl-20 max-w-7xl mx-auto grid grid-cols-[100px_auto] gap-16 mt-20'>
-      <img src='/images/logo.png' alt='logo' className='w-[121px] h-[49px]' />
+      <img src='/images/logo.svg' alt='logo' className='w-[121px] h-[49px]' />
       <div className='ml-20 lg:flex hidden items-start gap-10 tracking-widest text-lg'>
         <Link
           href='/'

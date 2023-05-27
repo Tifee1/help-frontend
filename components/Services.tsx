@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 const Services: React.FC = () => {
   return (
-    <section className='w-[95%] max-w-7xl mx-auto mt-16'>
-      <div className='text-center relative mb-20'>
-        <h3 className='text-[#2B4E8C] text-lg'>popular</h3>
+    <section className='w-full ml-[70px] mt-16'>
+      <div className='text-center relative mb-[50px]'>
+        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>popular</h3>
         <h2 className='font-bold font-raleway text-[32px]'>popular services</h2>
-        <h3 className='text-[#2B4E8C]/70 font-bold font-raleway text-[32px] relative sm:absolute right-0 top-[50%] lowercase'>
+        <h3 className='text-[rgba(43,_78,_140,_0.5)] font-bold font-raleway text-[32px] relative sm:absolute right-[10%] top-[50%] lowercase'>
           10 options
         </h3>
       </div>
@@ -23,7 +23,7 @@ const Services: React.FC = () => {
         }}
         loop={true}
         direction='horizontal'
-        className='swiper-container py-16'
+        className='swiper-container'
       >
         <div>
           {services.map((item, id) => (
@@ -34,8 +34,8 @@ const Services: React.FC = () => {
                   alt={item.text}
                   className='w-[240px] h-[255px]'
                 />
-                <div className='text-center mt-2 text-[14px]'>
-                  <p className='capitalize mb-2'>{item.text}</p>
+                <div className='text-center mt-2 text-[14px] text-[#484848]'>
+                  <p className='capitalize mb-2.5'>{item.text}</p>
                   <p className='font-semibold'>+ {item.requests} requests</p>
                 </div>
               </article>

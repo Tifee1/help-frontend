@@ -8,16 +8,16 @@ import Image from 'next/image'
 const Reviews: React.FC = () => {
   SwiperCore.use([Pagination])
   return (
-    <section className='w-[95%] max-w-7xl mx-auto my-16'>
+    <section className='w-full ml-[70px] my-16'>
       <div className='text-center relative mb-8'>
-        <h3 className='text-[#2B4E8C] text-lg'>Reviews</h3>
+        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>Reviews</h3>
         <h2 className='font-bold font-raleway text-[32px]'>
           Feedback from you
         </h2>
       </div>
 
       <Swiper
-        spaceBetween={30}
+        spaceBetween={24}
         slidesPerView={4}
         pagination={{
           clickable: true,
@@ -32,19 +32,19 @@ const Reviews: React.FC = () => {
       >
         {reviews.map((review, index) => (
           <SwiperSlide key={index}>
-            <article className='rounded-[20px] shadow-2xl flex flex-col items-center justify-center px-6 h-[485px] mb-12 relative'>
-              <div className='flex items-center justify-center mb-4'>
+            <article className='rounded-[20px] shadow-[6.30598px_-1.57649px_77.2482px_1.57649px_rgba(0,_0,_0,_0.12)] flex flex-col items-center justify-center pt-6 px-10 h-[485px] mb-12 relative'>
+              <div className='flex items-center justify-center mb-[6px]'>
                 <img
                   src={review.image}
                   alt={review.name}
                   className='w-[68] h-[68]'
                 />
               </div>
-              <h3 className='font-bold text-center mb-2 text-lg'>
+              <h3 className='font-bold text-center -mb-1 text-lg'>
                 {review.name}
               </h3>
 
-              <div className='flex items-center justify-center mb-10'>
+              <div className='flex items-center justify-center mb-9'>
                 <StarRatings
                   rating={review.stars}
                   starDimension='20px'
@@ -55,7 +55,7 @@ const Reviews: React.FC = () => {
               <p className='text-[rgba(0,_0,_0,_0.7)] text-lg mb-20'>
                 {review.message}
               </p>
-              <p className='font-semibold absolute bottom-2 right-5 text-lg'>
+              <p className='font-semibold absolute bottom-7 right-10 text-lg'>
                 {review.date}
               </p>
             </article>

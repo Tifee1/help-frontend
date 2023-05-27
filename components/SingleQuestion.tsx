@@ -13,24 +13,24 @@ const SingleQuestion = ({ question, answer }: Props) => {
     <div className='mb-12 trans shadow-lg rounded-[20px] p-6'>
       <div
         className={
-          'trans flex items-center justify-center gap-4 p-4 cursor-pointer'
+          'trans grid grid-cols-[1fr_30px] items-start gap-4 p-4 cursor-pointer'
         }
         onClick={() => setShow(!show)}
       >
-        <h3 className='text-center text-lg'>{question}</h3>
+        <h3 className='text-lg'>{question}</h3>
         <div>
           <span className='ml-4 text-2xl'>
             {show ? (
               <img
-                src='./images/arrow-left.png'
+                src='./images/arrow-left.svg'
                 alt='left'
-                className='w-[25px] h-[25px]'
+                className='w-[25px] h-[25px] -mt-6'
               />
             ) : (
               <img
-                src='./images/arrow-right.png'
+                src='./images/arrow-right.svg'
                 alt='right'
-                className='w-[25px] h-[25px]'
+                className='w-[25px] h-[25px] -mt-6'
               />
             )}
           </span>
