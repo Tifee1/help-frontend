@@ -8,8 +8,7 @@ const Hero: React.FC = () => {
           Revolutionizing Everyday Work
         </h2>
         <p className='text-lg font-medium mb-[20px]'>
-          Everydays work is important, but it is also time consuming. We can
-          help.
+          Everyday work is important, but it's also time consuming. We can help.
         </p>
         <div className='flex flex-col xs:flex-row gap-5 items-center mb-2.5'>
           <img

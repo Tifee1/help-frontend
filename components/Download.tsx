@@ -2,8 +2,8 @@ const Download: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-24 pl-16'>
       <div className='text-center relative'>
-        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>join us</h3>
-        <h2 className='font-bold font-raleway text-[32px]'>our app</h2>
+        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>Join us</h3>
+        <h2 className='font-bold font-raleway text-[32px]'>Our app</h2>
       </div>
       <div className='grid lg:grid-cols-[2fr_1fr] gap-8 items-center justify-center mt-12'>
         <div className='relative flex justify-center items-center'>
@@ -46,7 +46,7 @@ const Download: React.FC = () => {
         </div>
         <div className='grid gap-4'>
           <h2 className='font-bold font-raleway text-[64px]'>
-            Download our app now
+            Download our App Now
           </h2>
           <p className='text-lg text-[rgba(0,_0,_0,_0.5)] font-medium'>
             Make your to-do list wherever you are with our mobile app.

@@ -5,7 +5,7 @@ const Question: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-16'>
       <div className='text-center relative'>
-        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>questions</h3>
+        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>Questions</h3>
         <h2 className='font-bold font-raleway text-[32px]'>
           Frequently asked questions
         </h2>

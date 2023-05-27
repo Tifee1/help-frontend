@@ -54,8 +54,8 @@ const Contact: React.FC = () => {
   return (
     <section className='w-[95%] max-w-7xl mx-auto mt-16'>
       <div className='text-center relative mb-8'>
-        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>contacts</h3>
-        <h2 className='font-bold font-raleway text-[32px]'>contact us</h2>
+        <h3 className='text-[#2B4E8C] text-lg mb-[5px]'>Contacts</h3>
+        <h2 className='font-bold font-raleway text-[32px]'>Contact us</h2>
       </div>
       <article className='grid md:grid-cols-2 items-center justify-center gap-16 w-[90%] max-w-4xl mx-auto rounded-[20px] shadow-2xl p-[50px]'>
         <div className='grid gap-4'>
