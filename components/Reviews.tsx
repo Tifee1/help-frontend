@@ -19,14 +19,14 @@ const Reviews: React.FC = () => {
       <section className='w-full mb-16 overflow-hidden'>
         <Swiper
           spaceBetween={24}
-          slidesPerView={4}
+          slidesPerView={1}
           pagination={{
             clickable: true,
           }}
           breakpoints={{
-            220: { slidesPerView: 1 },
-            1008: { slidesPerView: 2 },
-            1200: { slidesPerView: 4 },
+            620: { slidesPerView: 2 },
+            1006: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
           }}
           className='swiper-container'
         >

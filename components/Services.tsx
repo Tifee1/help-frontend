@@ -11,7 +11,7 @@ const Services: React.FC = () => {
           10 options
         </h3>
       </div>
-      <section className='ml-[70px] mt-16 overflow-hidden'>
+      <section className='mt-16 overflow-hidden'>
         <Swiper
           spaceBetween={15}
           slidesPerView={5}
