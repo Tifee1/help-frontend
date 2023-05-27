@@ -82,7 +82,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 /* target all bullets */
-.swiper-pagination-bullet {
+.swiper-pagination-clickable.swiper-pagination-bullet {
   border: 0.578378px solid #2b4e8c;
   background: white;
   width: 14.46px;
