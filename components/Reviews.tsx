@@ -28,7 +28,7 @@ const Reviews: React.FC = () => {
             1008: { slidesPerView: 2 },
             1200: { slidesPerView: 4 },
           }}
-          className='pl-[70px] py-4 swiper-container'
+          className='swiper-container'
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>

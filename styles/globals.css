@@ -68,6 +68,8 @@ h4 {
   }
 }
 
+@tailwind components;
+
 .trans {
   transition: all 0.3s linear;
 }
@@ -87,5 +89,12 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   height: 14.46px;
   opacity: 1;
 }
-@tailwind components;
+
+.swiper,
+.swiper-container {
+  padding-left: 70px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 @tailwind utilities;
