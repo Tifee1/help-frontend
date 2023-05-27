@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         {/* Logo */}
         <article className='text-[rgba(0,_0,_0,_0.5)] text-lg font-medium'>
           <img
-            src='/images/logo.png'
+            src='/images/logo.svg'
             alt='logo'
             className='w-[121px] h-[49px]'
           />
