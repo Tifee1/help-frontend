@@ -90,7 +90,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
 }
 
-.swiper .swiper-container {
+.swiper.swiper-container {
   padding-left: 70px;
   padding-top: 16px;
   padding-bottom: 16px;
