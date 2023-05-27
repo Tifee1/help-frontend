@@ -33,7 +33,7 @@ const Reviews: React.FC = () => {
         >
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
-              <article className='rounded-[20px] shadow-[6.30598px_-1.57649px_77.2482px_1.57649px_rgba(0,_0,_0,_0.12)] flex flex-col items-center justify-center pt-6 px-10 h-[485px] mb-12 relative'>
+              <article className='rounded-[20px] shadow-[6.30598px_-1.57649px_77.2482px_1.57649px_rgba(0,_0,_0,_0.12)] flex flex-col items-center justify-center pt-6 px-10 h-[484px] mb-12 relative'>
                 <div className='flex items-center justify-center mb-[6px]'>
                   <img
                     src={review.image}
