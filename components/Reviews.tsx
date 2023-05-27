@@ -24,10 +24,9 @@ const Reviews: React.FC = () => {
             clickable: true,
           }}
           breakpoints={{
-            320: { slidesPerView: 1 },
-            475: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
+            220: { slidesPerView: 1 },
+            1008: { slidesPerView: 2 },
+            1200: { slidesPerView: 4 },
           }}
           className='swiper-container pl-[70px] py-4'
         >
